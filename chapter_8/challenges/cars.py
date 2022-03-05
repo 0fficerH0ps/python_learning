@@ -7,3 +7,13 @@
 # Print the dictionary that’s returned to make sure all the information was
 # stored correctly.
 
+def make_car(manufacturer, model_name, **kwaugs):
+    """Build dict containing everything we know about a car."""
+    kwaugs['make'] = manufacturer
+    kwaugs['model'] = model_name
+    return kwaugs
+
+car = make_car('subaru', 'outback', color='blue', tow_package=True)
+print(car)
+
+# Tested, works.
