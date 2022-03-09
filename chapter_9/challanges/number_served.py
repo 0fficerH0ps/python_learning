@@ -63,10 +63,21 @@ class Restaurants:
         """Set the amount of customers served."""
         self.num_served = number_served
 
-    def increment_number_served(self):
+    def increment_number_served(self, peeps_served):
         """Incrument number served by number of customers."""
-        
+        self.num_served += peeps_served
 
 restaurant = Restaurants('Hops Stops', 'Kissaten')
+restaurant.set_number_served(100)
+print(restaurant.num_served)
 
+restaurant.increment_number_served(92)
+print(restaurant.num_served)
 
+restaurant.increment_number_served(108)
+print(restaurant.num_served)
+
+restaurant.set_number_served(150)
+print(restaurant.num_served)
+
+# Tested, works 3/9/22.
