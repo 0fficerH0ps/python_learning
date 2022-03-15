@@ -24,13 +24,28 @@ class Restaurant:
         print(f"{self.name} is now open!")
 
 class IceCreamStand(Restaurant):
-    """Represent aspects of a restaurant, specific to an icecream stand."""
+    """
+    Represent aspects of a restaurant, 
+    Then aspectes specific to an icecream stand.
+    """
 
     def __init__(self, restaurant_name, restaurant_cuisine):
         """Initialize attributes of the parent class."""
-        super.__init__(restaurant_name, restaurant_cuisine)
+        super().__init__(restaurant_name, restaurant_cuisine)
+        self.flavor = "vanilla"
 
-    def flavors(self, flavors):
-        """Initialize icecream flavors"""
+    def set_flavors(self, flavors):
+        """Store a list of icecream flavors."""
         self.flavor = flavors
-        
+
+    def display_flavors(self):
+        """Display a list of flavors."""
+        print(self.flavor)
+
+MyStand = IceCreamStand('Hops Stops', 'Ice Cream')
+
+MyStand.set_flavors(['strawberry', 'banana', 'mango'])
+
+MyStand.display_flavors()
+
+# Tested, works 3/15/2022.

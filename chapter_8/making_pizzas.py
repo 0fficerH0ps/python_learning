@@ -2,7 +2,7 @@
 # directory as pizza.py. This file imports the module we just created and then
 # makes two calls to make_pizza():
 
-import pizza_module
+import chapter_8.pizza_module as pizza_module
 
 pizza_module.make_pizza(16, 'pepperoni')
 pizza_module.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
@@ -41,7 +41,7 @@ pizza_module.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
 # The making_pizzas.py example would look like this if we want to import
 # just the function we’re going to use:
 
-from pizza_module import make_pizza
+from chapter_8.pizza_module import make_pizza
 
 make_pizza(16, 'pepperoni')
 make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
@@ -62,7 +62,7 @@ make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
 # make_pizza as mp. The as keyword renames a function using the alias you
 # provide:
 
-from pizza_module import make_pizza as mp
+from chapter_8.pizza_module import make_pizza as mp
 mp(16, 'pepperoni')
 mp(12, 'mushrooms', 'green peppers', 'extra cheese')
 
@@ -83,7 +83,7 @@ mp(12, 'mushrooms', 'green peppers', 'extra cheese')
 # alias, like p for pizza, allows you to call the module’s functions more quickly.
 # Calling p.make_pizza() is more concise than calling pizza.make_pizza():
 
-import pizza_module as p
+import chapter_8.pizza_module as p
 p.make_pizza(16, 'pepperoni')
 p.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
 
@@ -105,7 +105,7 @@ p.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
 # You can tell Python to import every function in a module by using the asterisk
 # (*) operator:
 
-from pizza_module import *
+from chapter_8.pizza_module import *
 make_pizza(16, 'pepperoni')
 make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
 
